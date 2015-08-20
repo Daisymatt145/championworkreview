@@ -1,0 +1,2 @@
+module ChampionworksHelper
+end

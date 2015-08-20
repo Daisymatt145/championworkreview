@@ -1,0 +1,6 @@
+<h2><%= @championwork.workcategory%></h2>
+<p><%= @championwork.description%></p>
+<small><%= @championwork.created_at%></small>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>

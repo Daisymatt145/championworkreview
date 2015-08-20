@@ -1,0 +1,24 @@
+<h2>Add a new Post</h2>
+
+
+<%= form_for @championwork do |f| %>
+<p><% if @championwork.errors.any? %></p>
+  <h2>Erros</h2>
+  <ul>
+   <% @championwork.errors.full_messages.each do |message|  %>
+       <li><%= message %></li>
+   <% end %>
+  </ul>
+<% end %>
+<p>
+<%= f.label:Category %>
+<%= f.text_field:workcategory %>
+</p>
+<div>
+<%= f.label:Description %>
+ <%= f.text_area :description, :cols => "20", :rows => "10" %>
+</div>
+<p>
+<%= f.submit "Add a new championwork" %>
+</p>
+<% end %>

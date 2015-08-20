@@ -1,0 +1,11 @@
+<h1>champion work</h>
+<% @championworks.each do |championwork| %>
+<h2><%= link_to  championwork.workcategory, championwork  %></h2>
+<p><%= championwork.description %></p>
+<p><%= link_to "Edit", edit_championwork_path(championwork) %></p>
+<p><%= link_to "Delete", championwork, :method => :delete, :confirm => 'Are you sure?' %></p>
+<hr/>
+<% end %>
+<p>
+<%= link_to "Add a new Champion work", new_championwork_path %>
+</p>
